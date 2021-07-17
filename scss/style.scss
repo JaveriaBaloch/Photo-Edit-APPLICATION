@@ -1,0 +1,223 @@
+$greydark:grey;
+$greydim:rgb(182, 180, 180);
+$greylight:rgb(207, 207, 207);
+$r1:linear-gradient(to left, rgb(202, 7, 7),rgb(20, 50, 220));
+$r2:linear-gradient(to left, rgb(255, 0, 119)27%,rgb(9, 23, 221)57%);
+$body:linear-gradient(to bottom left, rgb(16, 104, 145)27%,rgb(34, 17, 80)57%);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+  width: 20rem;
+  padding: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(255, 0, 119);
+  img{
+    width: 4rem;
+    margin-right: 2rem;
+  }
+}
+body{
+   
+    background:$body;
+    width: 100%;
+    height: 100%;
+}
+#E1
+{ position: relative;
+    z-index: 2;
+}
+#E1::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    background: grayscale($color: #929292);
+    z-index: -1;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    ::-webkit-scrollbar {
+        width: 10px;
+       
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: none;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: white;
+        border-radius: 10rem;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: $greydim;
+      }
+  
+  
+}
+input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+ input::before {
+    content: 'Upload Photo';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #740606);
+    border: 1px solid #999;
+    border-radius: 3px;
+    text-align: center;
+    background: repeating-linear-gradient(to left,rgb(128, 58, 0), rgb(100, 47, 3),rgb(71, 42, 4));
+    padding: 15px 0px;
+    outline: none;
+    color: #fff;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 0.2px $greydim;
+    font-weight: 700;
+    font-size: 10pt;
+    width: 90%;
+    transition: all 2s;
+   margin-left: 0.4rem;
+
+  }
+  input:hover::before{
+    background: repeating-linear-gradient(to left,rgb(255, 82, 232), rgb(37, 248, 255),yellow);
+  }
+  input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+main{
+    width: 80%;
+    display: block;
+    flex-direction: column;
+    canvas{
+        border: rgb(255, 255, 255) 0.1rem solid;
+        width: 97%;
+        margin: 0 auto;
+        
+        }
+        div{
+           
+            width: 97%;
+            display: flex;
+            justify-content: space-between;
+            button{
+                width: 49%;
+                padding: 0.7rem 0;
+                border-radius: 1rem 0;
+                outline: none;
+                border: none;
+                background: $r1;
+                color: #ffff;
+                font-size: 1rem;
+                transition: all 2s;
+                &:hover{
+                    background: $r2;
+                    cursor: pointer;
+                }
+            }
+        }
+}
+aside{
+  width: 20%;
+    height: 97vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-left: rgb(102, 5, 102) double 1rem;
+ 
+    
+ div{
+    background:$r1 ;
+    color: #fff;
+    display: flex;
+    //  justify-content: space-evenly;
+    margin: 1rem 0.5rem;
+    border-radius: 2rem;
+    overflow-x: hidden;
+    
+    transition: all 2s;
+     canvas{
+        justify-self: self-start;
+        height: 8.5rem;
+        width: 14.5rem;
+        background-color: $greylight;
+    }
+ }
+    div:hover{
+        background: $r2;
+        cursor: pointer;
+    }
+}
+@media(max-width:800px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main{
+        width: 95%;
+        margin: 0 auto;
+    }
+    aside{
+      width: 95%;
+        margin-top: 2rem;
+        height: 40vh;
+        div{
+          width: 97%;
+          canvas{
+            width:100%;
+          }
+        }
+      
+    }
+    input::-webkit-file-upload-button {
+        visibility: hidden;
+        width: 100%;
+      }
+     input::before {
+        content: 'Upload Photo';
+        display: inline-block;
+        background: linear-gradient(top, #f9f9f9, #740606);
+        border: 1px solid #999;
+        border-radius: 3px;
+        text-align: center;
+        background: repeating-linear-gradient(to left,rgb(128, 58, 0), rgb(100, 47, 3),rgb(71, 42, 4));
+        padding: 15px 0px;
+        outline: none;
+        color: #fff;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 0.2px $greydim;
+        font-weight: 700;
+        font-size: 10pt;
+        width: 90%;
+        transition: all 2s;
+       margin-left: 0.4rem;
+    
+      }
+      input:hover::before{
+        background: repeating-linear-gradient(to left,rgb(255, 82, 232), rgb(37, 248, 255),yellow);
+      }
+      input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+      }
+}
+.y{
+  display: none;
+}
